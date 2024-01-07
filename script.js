@@ -2,8 +2,7 @@ function firstWord(str) {
    if (!str || str.indexOf(' ') === -1) {
     return str; // Return the entire string
   }
-	return str.split(' ')[0];
-	
+	return sstr.substring(0,str.indexOf(' '));
 }
 
 // Get input from the user:
