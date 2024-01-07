@@ -1,9 +1,11 @@
 function firstWord(str) {
-  // Find the index of the first space, if any:
-  const spaceIndex = str.indexOf(' ');
+   if (!str || str.indexOf(' ') === -1) {
+    return str; // Return the entire string
+  }
+	const spaceIndex = str.indexOf(' ');
+  return str.substring(0, spaceIndex);
 
-  // Return the appropriate substring:
-  return spaceIndex === -1 ? str : str.substring(0, spaceIndex);
+	
 }
 
 // Get input from the user:
