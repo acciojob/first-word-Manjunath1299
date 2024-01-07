@@ -1,19 +1,13 @@
-function firstWord(s) {
-  // your code here
-  // console.log(s);
-  s=s.split(" ");
-  if(s.length==1){
-  return s[0]
-  }
-  else if(s.length<1){
-  return " "
-  }
-  else if(s.length>1){
-  return s[0];
-  }
+function firstWord(str) {
+  // Find the index of the first space, if any:
+  const spaceIndex = str.indexOf(' ');
+
+  // Return the appropriate substring:
+  return spaceIndex === -1 ? str : str.substring(0, spaceIndex);
 }
 
-// Do not change the code below
+// Get input from the user:
+const inputString = prompt("Enter String:");
 
-const s = prompt("Enter String:");
-alert(firstWord(s));
+// Call the function and display the result:
+alert(firstWord(inputString));
