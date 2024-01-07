@@ -2,8 +2,8 @@ function firstWord(str) {
    if (!str || str.indexOf(' ') === -1) {
     return str; // Return the entire string
   }
-	const spaceIndex = str.indexOf(' ');
-  return str.substring(0, spaceIndex);
+	  const match = str.match(/^\w+/);
+  return match ? match[0] : str;
 
 	
 }
