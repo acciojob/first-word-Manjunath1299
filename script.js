@@ -2,9 +2,7 @@ function firstWord(str) {
    if (!str || str.indexOf(' ') === -1) {
     return str; // Return the entire string
   }
-	  const match = str.match(/^\w+/);
-  return match ? match[0] : str;
-
+	return str.split(' ')[0];
 	
 }
 
